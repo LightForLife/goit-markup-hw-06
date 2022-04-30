@@ -289,8 +289,10 @@ img {
   fill: var(--accent-text-color);
 }
 
+/* --------------Modal-form----------------------- */
+
 .modal-title {
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 
   font-weight: 700;
   font-size: 20px;
@@ -325,6 +327,7 @@ img {
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill var(--timing-function);
 }
 
 .modal-input {
@@ -337,14 +340,22 @@ img {
   box-sizing: border-box;
   border-radius: 4px;
   background-color: transparent;
+  transition: border-color var(--timing-function);
 }
 
-.comment-text::placeholder {
-  font-size: 12px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
+.modal-field:focus-within .input-icon,
+.modal-input:not(:placeholder-shown) + .input-icon {
+  fill: var(--accent-text-color);
+}
 
-  color: rgba(117, 117, 117, 0.5);
+.modal-input:focus-within,
+.modal-input:not(:placeholder-shown) {
+  border-color: var(--accent-text-color);
+  outline: none;
+}
+
+.modal-comment {
+  margin-bottom: 20px;
 }
 
 .comment-text {
@@ -361,15 +372,69 @@ img {
   color: var(--first-main-color);
 }
 
+.comment-text::placeholder {
+  font-size: 12px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-field:focus-within .comment-text,
+.comment-text:not(:placeholder-shown){
+  border-color: var(--accent-text-color);
+  outline: none;
+}
+
 /*Checkbox
 -----------------------*/
+
+.modal-checkbox {
+  display: block;
+  margin-bottom: 30px;
+}
+
 .check-input {
-  position: absolute;
+  /* position: absolute;
 
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  appearance: none; */
 }
+
+
+.modal-btn {
+  display: block;
+
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-right: 55px;
+  padding-bottom: 10px;
+  padding-left: 56px;
+
+  min-width: 200px;
+height: 50px;
+
+font-weight: 700;
+font-size: 16px;
+line-height: 1.88;
+letter-spacing: 0.06em;
+
+cursor: pointer;
+border: none;
+
+background: var(--accent-text-color);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+color: var(--first-bg-coor);
+transition: background-color var(--timing-function);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+background-color: #188CE8;
+}
+
 
 /* -----------------------Hero----------------------- */
 .hero {
@@ -422,12 +487,13 @@ img {
   letter-spacing: 0.06em;
   color: #ffffff;
   cursor: pointer;
-  background: var(--accent-text-color);
+  background-color: var(--accent-text-color);
+  transition: background-color var(--timing-function) ;
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
-  background: var(--accent-text-color);
+  background-color: #188CE8;
 }
 
 /* ----------------------Features---------------------- */
@@ -657,6 +723,9 @@ img {
   background: var(--second-bg-coor);
 }
 
+.footer-box {
+  flex-grow: 1;
+}
 .footer-logo {
   display: block;
   margin-bottom: 20px;
@@ -767,42 +836,78 @@ Footer-form--------------------- */
   color: var(--first-bg-coor);
 }
 
+.subscribe-field {
+  display: flex;
+}
+
+.subscribe_input {
+  min-width: 358px;
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe_input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .subscribe-btn {
-  display: block;
+  display: inline-block;
 
-  position: relative;
+  margin-left: 12px;
 
-  margin: 0;
-
-  width: 200px;
+  min-width: 200px;
   height: 50px;
 
-  padding-left: 29px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
+  padding-left: 28px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-right: 28px;
 
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
 
+  cursor: pointer;
+
+  border: none;
   color: var(--first-bg-coor);
-  background: var(--accent-text-color);
+  background-color: var(--accent-text-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-
-  cursor: pointer;
+  transition: background-color var(--timing-function);
 }
 
 .subscribe-icon {
-  /* position: absolute; */
+  display: inline-block;
+
   margin-left: 10px;
 
-  right: 28px;
-  top: 50%;
-  transform: translateY(-50%);
+  fill: var(--first-bg-coor);
+  vertical-align: middle;
 }
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background: #188ce8;
+}
+
+.subscribe_input:focus-within {
+  outline: none;
+}
+
 /* -----------------Portfolio-button------------------ */
 .btn-list {
   display: flex;
