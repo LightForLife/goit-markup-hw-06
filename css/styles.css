@@ -28,7 +28,7 @@ ul {
   padding: 0;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--first-main-color);
   font-size: 14px;
   background-color: var(--first-bg-coor);
@@ -129,7 +129,7 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
 
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
@@ -164,7 +164,7 @@ img {
 }
 
 .header-link.current::after {
-  content: "";
+  content: '';
 
   position: absolute;
   left: 0;
@@ -418,7 +418,7 @@ img {
 
 .check-box {
   display: inline-block;
-  content: "";
+  content: '';
   width: 16px;
   height: 15px;
 
@@ -491,11 +491,7 @@ img {
   min-height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/header-img.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -702,8 +698,7 @@ img {
   align-items: center;
   color: #afb1b8;
 
-  transition: color var(--timing-function),
-    background-color var(--timing-function);
+  transition: color var(--timing-function), background-color var(--timing-function);
 }
 
 .team-soc-icon {
@@ -779,7 +774,7 @@ img {
   display: block;
   margin-bottom: 20px;
 
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
@@ -980,8 +975,8 @@ Footer-form--------------------- */
   cursor: pointer;
   color: var(--portfolio-btn-color);
 
-  transition: color var(--timing-function),
-    background-color var(--timing-function), box-shadow var(--timing-function);
+  transition: color var(--timing-function), background-color var(--timing-function),
+    box-shadow var(--timing-function);
 }
 
 .btn-primary:hover,
