@@ -424,11 +424,21 @@ img {
 
   margin-right: 7px;
 
-  background-image: url(../images/check-off.svg);
+  fill: var(--first-main-color);
+  transition: fill var(--accent-text-color);
+}
+
+.check-off {
+  display: block;
 }
 
 .check-input:checked + .check-box {
   background-image: url(../images/check-on.svg);
+  fill: var(--accent-text-color);
+}
+
+.check-input:focus + .check-box {
+  fill: var(--accent-text-color);
 }
 
 .check-text {
