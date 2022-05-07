@@ -102,12 +102,7 @@ img {
   margin-left: 93px;
 }
 
-.header-contact {
-  display: flex;
-  margin-left: auto;
-}
-
-.header-nav {
+.navigation {
   display: flex;
   align-items: center;
 }
@@ -117,15 +112,11 @@ img {
   align-items: center;
 }
 
-.header-item:not(:last-child) {
+.header-list__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.contact-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.header-logo {
+.navigation__logo {
   padding-top: 24px;
   padding-bottom: 24px;
 
@@ -138,11 +129,11 @@ img {
   color: var(--first-main-color);
 }
 
-.logo-text {
+.logo__text {
   color: var(--accent-text-color);
 }
 
-.header-link {
+.header-list__link {
   display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -158,12 +149,12 @@ img {
   transition: color var(--timing-function);
 }
 
-.header-link:hover,
-.header-link:focus {
+.header-list__link:hover,
+.header-list__link:focus {
   color: var(--accent-text-color);
 }
 
-.header-link.current::after {
+.header-list__link.current::after {
   content: '';
 
   position: absolute;
@@ -183,7 +174,12 @@ img {
   color: var(--accent-text-color);
 }
 
-.header-info {
+.contact-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.contact-list__link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -200,13 +196,17 @@ img {
   transition: color var(--timing-function);
 }
 
-.header-icon {
+.contact-list__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact-list__icon {
   fill: currentColor;
   margin-right: 10px;
 }
 
-.header-info:hover,
-.header-info:focus {
+.contact-list__link:hover,
+.contact-list__link:focus {
   color: var(--accent-text-color);
 }
 
@@ -434,7 +434,7 @@ img {
 
 .check-input:checked + .check-box {
   background-image: url(../images/check-on.svg);
-  fill: var(--accent-text-color);
+  fill: transparent;
 }
 
 .check-input:focus + .check-box {
